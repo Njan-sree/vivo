@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" >
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">phone</a></li>
+                    <li><a href="#">accesories</a></li>
+                    <li><a href="#">cart</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="info">
+            <div class="controls">
+                <img src="images/up.png" id="upbtn" >
+                <h3>features</h3>
+                <img src="images/up.png" id="dwnbtn">
+            </div>
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/camera.png" >
+                    <div>
+                        <h2>camera</h2>
+                        <p>12mp, wide angle lense</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/charging.png" >
+                    <div>
+                    <h2>battery life</h2>
+                    <p>5000mAh, 720Hrs Standby</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/display.png" >
+                    <div>
+                        <h2>display</h2>
+                    <p>6.5" mini-drop fullscreen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/processor.png" >
+                    <div>
+                        <h2>processor</h2>
+                        <p>snapdragon octa-core llnm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile">
+            <img src="images/mobile.png" >
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <script>
+        let circle =document.getElementById('#circle');
+        let up =document.getElementById('#upbtn');
+        let down =document.getElementById('#dwnbtn');
+
+        let rotateValue = circle.style.transform;
+        let rotatesum;
+
+
+        up.onclick = function(){
+            rotatesum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotatesum;
+            rotateValue = rotatesum;
+        };
+
+
+    </script>
+</body>
+</html>
