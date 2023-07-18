@@ -23,11 +23,8 @@
         </nav>
 
         <div class="info">
-            <div class="controls">
-                <img src="images/up.png" id="upbtn" >
-                <h3>features</h3>
-                <img src="images/up.png" id="dwnbtn">
-            </div>
+            
+            
             <div id="circle">
                 <div class="feature one">
                     <img src="images/camera.png" >
@@ -58,6 +55,12 @@
                     </div>
                 </div>
             </div>
+            <div class="overlay"></div>
+            <div class="controls">
+                <img src="images/up.png" id="upbtn" >
+                <h3>features</h3>
+                <img src="images/up.png" id="dwnbtn">
+            </div>
         </div>
 
         <div class="mobile">
@@ -74,9 +77,9 @@
 
 
     <script>
-        let circle =document.getElementById('#circle');
-        let up =document.getElementById('#upbtn');
-        let down =document.getElementById('#dwnbtn');
+        let circle =document.getElementById('circle');
+        let up =document.getElementById('upbtn');
+        let down =document.getElementById('dwnbtn');
 
         let rotateValue = circle.style.transform;
         let rotatesum;
@@ -84,6 +87,11 @@
 
         up.onclick = function(){
             rotatesum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotatesum;
+            rotateValue = rotatesum;
+        };
+        down.onclick = function(){
+            rotatesum = rotateValue + "rotate(90deg)";
             circle.style.transform = rotatesum;
             rotateValue = rotatesum;
         };
